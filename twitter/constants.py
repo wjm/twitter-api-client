@@ -102,20 +102,20 @@ class Operation:
     SearchTimeline = {'rawQuery': str, 'product': str}, 'nK1dw4oV3k4w5TdtcAdSww', 'SearchTimeline'
     AudioSpaceById = {'id': str}, 'fYAuJHiY3TmYdBmrRtIKhA', 'AudioSpaceById'
     AudioSpaceSearch = {'filter': str, 'query': str}, 'NTq79TuSz6fHj8lQaferJw', 'AudioSpaceSearch',
-    UserByScreenName = {'screen_name': str}, 'sLVLhk0bGj3MVFEKTdax1w', 'UserByScreenName'
-    UserTweets = {'userId': int}, 'HuTx74BxAnezK1gWvYY7zg', 'UserTweets'
-    ProfileSpotlightsQuery = {'screen_name': str}, '9zwVLJ48lmVUk8u_Gh9DmA', 'ProfileSpotlightsQuery'
+    UserByScreenName = {'screen_name': str}, 'pLsOiyHJ1eFwPJlNmLp4Bg', 'UserByScreenName'
+    UserTweets = {'userId': int}, 'tBNuKtAJqe33sRX5V6Vlbg', 'UserTweets'
+    ProfileSpotlightsQuery = {'screen_name': str}, 'mzoqrVGwk-YTSGME1dRfXQ', 'ProfileSpotlightsQuery'
     UserByRestId = {'userId': int}, 'GazOglcBvgLigl3ywt6b3Q', 'UserByRestId'
     UsersByRestIds = {'userIds': list}, 'OJBgJQIrij6e3cjqQ3Zu1Q', 'UsersByRestIds'
     UserMedia = {'userId': int}, 'YqiE3JL1KNgf9nSljYdxaA', 'UserMedia'
     UserTweetsAndReplies = {'userId': int}, 'RIWc55YCNyUJ-U3HHGYkdg', 'UserTweetsAndReplies'
-    TweetResultByRestId = {'tweetId': int}, 'D_jNhjWZeRZT5NURzfJZSQ', 'TweetResultByRestId'
+    TweetResultByRestId = {'tweetId': int}, 'qbNCRD1EnQl8tsh0jsXT_A', 'TweetResultByRestId'
     TweetResultsByRestIds = {'tweetIds': list[int | str]}, 'BWy5aoI-WvwbeSiHUIf2Hw', 'TweetResultsByRestIds'
-    TweetDetail = {'focalTweetId': int}, 'zXaXQgfyR4GxE21uwYQSyA', 'TweetDetail'
+    TweetDetail = {'focalTweetId': int}, 'vsCTCQrF8oqASUb-x2SBcg', 'TweetDetail'
     TweetStats = {'rest_id': int}, 'EvbTkPDT-xQCfupPu0rWMA', 'TweetStats'
     Likes = {'userId': int}, 'nXEl0lfN_XSznVMlprThgQ', 'Likes'
-    Followers = {'userId': int}, 'pd8Tt1qUz1YWrICegqZ8cw', 'Followers'
-    Following = {'userId': int}, 'wjvx62Hye2dGVvnvVco0xA', 'Following'
+    Followers = {'userId': int}, 'a9TW9uKgJm6II3n6qKMrAA', 'Followers'
+    Following = {'userId': int}, 'pjk0XA-Lsifsa35oQ6FQdw', 'Following'
     Retweeters = {'tweetId': int}, '0BoJlKAxoNPQUHRftlwZ2w', 'Retweeters'
     Favoriters = {'tweetId': int}, 'XRRjv1-uj1HZn3o324etOQ', 'Favoriters'
     ConnectTabTimeline = {'context': dict}, 'lq02A-gEzbLefqTgD_PFzQ', 'ConnectTabTimeline'
@@ -149,7 +149,13 @@ class Operation:
     Bookmarks = 'tmd4ifV8RHltzn8ymGg1aw', 'Bookmarks'
 
     # misc/not implemented
+    BlueVerifiedFollowers = {'userId': int}, 'tkUXgIHS7dzok6hpZN6WdA', 'BlueVerifiedFollowers'
+
+    # misc/not implemented
     AdAccounts = 'a8KxGfFQAmm3WxqemuqSRA', 'AdAccounts'
+    ExploreSidebar = 'yE2zVpNfHCYDHrpaqPwM8A', 'ExploreSidebar'
+    SidebarUserRecommendations = 'TDtrShaKKs-vFLCuz2jLdA', 'SidebarUserRecommendations'
+    XChatDmSettingsQuery = 'zzeLdGlB0ZN6hiOYUIpDcQ', 'XChatDmSettingsQuery'
     ArticleTimeline = 'o9FyvnC-xg8mVBXqL4g-rg', 'ArticleTimeline'
     ArticleTweetsTimeline = 'x4ywSpvg6BesoDszkfbFQg', 'ArticleTweetsTimeline'
     AudienceEstimate = '1LYVUabJBYkPlUAWRabB3g', 'AudienceEstimate'
@@ -366,46 +372,46 @@ class Operation:
         'withMessages': True,
     }
     default_features = {
-        # new
-        'c9s_tweet_anatomy_moderator_badge_enabled': True,
-        'responsive_web_home_pinned_timelines_enabled': True,
-
-        'blue_business_profile_image_shape_enabled': True,
-        'creator_subscriptions_tweet_preview_api_enabled': True,
-        'freedom_of_speech_not_reach_fetch_enabled': True,
-        'graphql_is_translatable_rweb_tweet_is_translatable_enabled': True,
-        'graphql_timeline_v2_bookmark_timeline': True,
-        'hidden_profile_likes_enabled': True,
-        'highlights_tweets_tab_ui_enabled': True,
-        'interactive_text_enabled': True,
-        'longform_notetweets_consumption_enabled': True,
-        'longform_notetweets_inline_media_enabled': True,
-        'longform_notetweets_rich_text_read_enabled': True,
-        'longform_notetweets_richtext_consumption_enabled': True,
-        'profile_foundations_tweet_stats_enabled': True,
-        'profile_foundations_tweet_stats_tweet_frequency': True,
-        'responsive_web_birdwatch_note_limit_enabled': True,
-        'responsive_web_edit_tweet_api_enabled': True,
-        'responsive_web_enhance_cards_enabled': False,
-        'responsive_web_graphql_exclude_directive_enabled': True,
-        'responsive_web_graphql_skip_user_profile_image_extensions_enabled': False,
-        'responsive_web_graphql_timeline_navigation_enabled': True,
-        'responsive_web_media_download_video_enabled': False,
-        'responsive_web_text_conversations_enabled': False,
-        'responsive_web_twitter_article_data_v2_enabled': True,
-        'responsive_web_twitter_article_tweet_consumption_enabled': False,
-        'responsive_web_twitter_blue_verified_badge_is_enabled': True,
-        'rweb_lists_timeline_redesign_enabled': True,
-        'spaces_2022_h2_clipping': True,
-        'spaces_2022_h2_spaces_communities': True,
-        'standardized_nudges_misinfo': True,
-        'subscriptions_verification_info_verified_since_enabled': True,
-        'tweet_awards_web_tipping_enabled': False,
-        'tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled': True,
-        'tweetypie_unmention_optimization_enabled': True,
+        'rweb_video_screen_enabled': False,
+        'profile_label_improvements_pcf_label_in_post_enabled': True,
+        'responsive_web_profile_redirect_enabled': False,
+        'rweb_tipjar_consumption_enabled': False,
         'verified_phone_label_enabled': False,
-        'vibe_api_enabled': True,
-        'view_counts_everywhere_api_enabled': True
+        'creator_subscriptions_tweet_preview_api_enabled': True,
+        'responsive_web_graphql_timeline_navigation_enabled': True,
+        'responsive_web_graphql_skip_user_profile_image_extensions_enabled': False,
+        'premium_content_api_read_enabled': False,
+        'communities_web_enable_tweet_community_results_fetch': True,
+        'c9s_tweet_anatomy_moderator_badge_enabled': True,
+        'responsive_web_grok_analyze_button_fetch_trends_enabled': False,
+        'responsive_web_grok_analyze_post_followups_enabled': True,
+        'responsive_web_jetfuel_frame': True,
+        'responsive_web_grok_share_attachment_enabled': True,
+        'responsive_web_grok_annotations_enabled': True,
+        'articles_preview_enabled': True,
+        'responsive_web_edit_tweet_api_enabled': True,
+        'graphql_is_translatable_rweb_tweet_is_translatable_enabled': True,
+        'view_counts_everywhere_api_enabled': True,
+        'longform_notetweets_consumption_enabled': True,
+        'responsive_web_twitter_article_tweet_consumption_enabled': True,
+        'tweet_awards_web_tipping_enabled': False,
+        'content_disclosure_indicator_enabled': True,
+        'content_disclosure_ai_generated_indicator_enabled': True,
+        'responsive_web_grok_show_grok_translated_post': False,
+        'responsive_web_grok_analysis_button_from_backend': True,
+        'post_ctas_fetch_enabled': True,
+        'freedom_of_speech_not_reach_fetch_enabled': True,
+        'standardized_nudges_misinfo': True,
+        'tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled': True,
+        'longform_notetweets_rich_text_read_enabled': True,
+        'longform_notetweets_inline_media_enabled': False,
+        'responsive_web_grok_image_annotation_enabled': True,
+        'responsive_web_grok_imagine_annotation_enabled': True,
+        'responsive_web_grok_community_note_auto_translation_is_enabled': False,
+        'responsive_web_enhance_cards_enabled': False,
+    }
+    default_field_toggles = {
+        'withArticlePlainText': True,
     }
 
 
