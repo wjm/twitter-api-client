@@ -25,6 +25,8 @@
 
 ```bash
 pip install twitter-api-client -U
+#or
+pip install git+https://github.com/wjm/twitter-api-client.git
 ```
 
 ### Automation
